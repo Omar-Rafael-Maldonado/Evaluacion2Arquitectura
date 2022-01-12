@@ -1,0 +1,370 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.17 secs
+ 
+--> Reading design: Motor_A_Pasos.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "Motor_A_Pasos.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "Motor_A_Pasos"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : Motor_A_Pasos
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/omara/OneDrive/Escritorio/Examen/Motor_A_Pasos/Motor_A_Pasos.vhd" in Library work.
+Entity <motor_a_pasos> compiled.
+Entity <motor_a_pasos> (Architecture <motor_a_pasos_arq>) compiled.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <Motor_A_Pasos> in library <work> (architecture <motor_a_pasos_arq>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <Motor_A_Pasos> in library <work> (Architecture <motor_a_pasos_arq>).
+Entity <Motor_A_Pasos> analyzed. Unit <Motor_A_Pasos> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <Motor_A_Pasos>.
+    Related source file is "C:/Users/omara/OneDrive/Escritorio/Examen/Motor_A_Pasos/Motor_A_Pasos.vhd".
+    Found finite state machine <FSM_0> for signal <edo_act>.
+    -----------------------------------------------------------------------
+    | States             | 8                                              |
+    | Transitions        | 28                                             |
+    | Inputs             | 3                                              |
+    | Outputs            | 4                                              |
+    | Clock              | clk                       (rising_edge)        |
+    | Power Up State     | d1                                             |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Summary:
+	inferred   1 Finite State Machine(s).
+Unit <Motor_A_Pasos> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <edo_act/FSM> on signal <edo_act[1:3]> with user encoding.
+-------------------
+ State | Encoding
+-------------------
+ d1    | 000
+ d2    | 001
+ d3    | 010
+ d4    | 011
+ d5    | 100
+ d6    | 101
+ d7    | 110
+ d8    | 111
+-------------------
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <Motor_A_Pasos> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block Motor_A_Pasos, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 3
+ Flip-Flops                                            : 3
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : Motor_A_Pasos.ngr
+Top Level Output File Name         : Motor_A_Pasos
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 8
+#      LUT3                        : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 1
+# FlipFlops/Latches                : 3
+#      FD                          : 3
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 2
+#      OBUF                        : 4
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                        4  out of   4656     0%  
+ Number of Slice Flip Flops:              3  out of   9312     0%  
+ Number of 4 input LUTs:                  8  out of   9312     0%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 3     |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 3.185ns (Maximum Frequency: 313.972MHz)
+   Minimum input arrival time before clock: 3.775ns
+   Maximum output required time after clock: 5.831ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 3.185ns (frequency: 313.972MHz)
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Delay:               3.185ns (Levels of Logic = 2)
+  Source:            edo_act_FSM_FFd3 (FF)
+  Destination:       edo_act_FSM_FFd1 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: edo_act_FSM_FFd3 to edo_act_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               7   0.591   0.743  edo_act_FSM_FFd3 (edo_act_FSM_FFd3)
+     LUT3_L:I2->LO         1   0.704   0.135  edo_act_FSM_FFd1-In_SW0 (N3)
+     LUT3:I2->O            1   0.704   0.000  edo_act_FSM_FFd1-In (edo_act_FSM_FFd1-In)
+     FD:D                      0.308          edo_act_FSM_FFd1
+    ----------------------------------------
+    Total                      3.185ns (2.307ns logic, 0.878ns route)
+                                       (72.4% logic, 27.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 6 / 3
+-------------------------------------------------------------------------
+Offset:              3.775ns (Levels of Logic = 3)
+  Source:            sec<1> (PAD)
+  Destination:       edo_act_FSM_FFd1 (FF)
+  Destination Clock: clk rising
+
+  Data Path: sec<1> to edo_act_FSM_FFd1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             3   1.218   0.706  sec_1_IBUF (sec_1_IBUF)
+     LUT3_L:I0->LO         1   0.704   0.135  edo_act_FSM_FFd1-In_SW0 (N3)
+     LUT3:I2->O            1   0.704   0.000  edo_act_FSM_FFd1-In (edo_act_FSM_FFd1-In)
+     FD:D                      0.308          edo_act_FSM_FFd1
+    ----------------------------------------
+    Total                      3.775ns (2.934ns logic, 0.841ns route)
+                                       (77.7% logic, 22.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 12 / 4
+-------------------------------------------------------------------------
+Offset:              5.831ns (Levels of Logic = 2)
+  Source:            edo_act_FSM_FFd2 (FF)
+  Destination:       q<2> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: edo_act_FSM_FFd2 to q<2>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               6   0.591   0.844  edo_act_FSM_FFd2 (edo_act_FSM_FFd2)
+     LUT3:I0->O            1   0.704   0.420  edo_act_FSM_Out31 (q_0_OBUF)
+     OBUF:I->O                 3.272          q_0_OBUF (q<0>)
+    ----------------------------------------
+    Total                      5.831ns (4.567ns logic, 1.264ns route)
+                                       (78.3% logic, 21.7% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.23 secs
+ 
+--> 
+
+Total memory usage is 4497140 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

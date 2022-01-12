@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "C:/Users/omara/OneDrive/Escritorio/Examen/Motor_A_Pasos/Motor_A_Pasos.xst" -ofn "C:/Users/omara/OneDrive/Escritorio/Examen/Motor_A_Pasos/Motor_A_Pasos.syr" 
+xst -intstyle ise -ifn "C:/Users/omara/OneDrive/Escritorio/Examen/Motor_A_Pasos/Motor_A_Pasos.xst" -ofn "C:/Users/omara/OneDrive/Escritorio/Examen/Motor_A_Pasos/Motor_A_Pasos.syr" 
